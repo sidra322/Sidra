@@ -19,4 +19,4 @@ Route::match(['get','post'], '/', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/first_page', 'PageController@first_page')->name('first_page');
+Route::match(['get','post'],'/first_page', 'PageController@first_page')->name('first_page');
